@@ -1,0 +1,47 @@
+.f_tag {
+    
+    display: inline-flex;
+    align-items: center;
+    &.ty_xsmall {
+        height: 28px;
+        border-radius: 14px;
+        font-size: $fz_3;
+        padding: 0 8px;
+    }
+    &.ty_small {
+        height: 31px;
+        border-radius: 6px;
+        font-size: $fz_4;
+        padding: 0 10px;
+    }
+
+    &._blue {
+        background-color: #E2F5FF;
+        color:$c_key;
+        
+    }
+    &._red {
+        background-color: #FFE3E3;
+        color:$c_red;
+        
+    }
+    &._grey {
+        background-color: $c_bg;
+        color: $c_font;
+    }
+    &._line {
+        height: 24px;
+        border: 1px solid $c_line2;
+        border-radius: 12px;
+        //line-height: 22px;
+        padding: 0 8px;
+        font-size: 13px;
+        line-height: 1;
+    }
+    .btn_del {
+        width: 16px;
+        height: 16px;
+        background: url(../images/tag_del.svg) no-repeat center center;
+        margin-left: 4px;
+    }
+}

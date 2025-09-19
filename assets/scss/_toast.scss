@@ -1,0 +1,47 @@
+.toast {
+    position: fixed;
+    right: 0;
+    top: 70px;
+    z-index: 10000;
+    background-color: #fff;
+    border-radius: 8px;
+    width: calc(100% - 40px);
+    max-width: 390px;
+    box-shadow: 3px 8px 20px rgba(#000,.1);
+   
+    visibility: hidden;
+    opacity: 0;
+    transition: all .1s ease-in-out;
+    &.on {
+        right: 20px;
+        visibility: visible;
+        opacity: 1;
+    }
+    &_inner {
+        display: flex;
+        padding: 13px 14px;
+    }
+    &_txt {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    &_ico {
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/toast_ico1.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+    &_close {
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/ico_close2.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-left: auto;
+        flex-shrink: 0;
+        
+    }
+}

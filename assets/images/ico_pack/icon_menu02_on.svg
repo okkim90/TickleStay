@@ -1,0 +1,10 @@
+<svg id="ebf3a61e-e0ea-4b91-b2e4-ba9aa59eccba" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 20">
+  <defs>
+    <style>
+      .af9fa767-48b5-4d94-9e67-667267db93eb {
+        fill: #635954;
+      }
+    </style>
+  </defs>
+  <path class="af9fa767-48b5-4d94-9e67-667267db93eb" d="M5,19V14h6v0H5ZM1,21V11L8,6l7,5-.71.71-.71.72L8,8.45,3,12v7H5V14h6v7H9V16H7v5ZM23,3V13.13a6.5,6.5,0,0,0-.92-.82A7.25,7.25,0,0,0,21,11.68V5H12V6.4L10,5V3ZM17,9h2V7H17Zm1,14a5,5,0,0,1-5-5,5,5,0,0,1,5-5,5,5,0,0,1,5,5,5,5,0,0,1-5,5Zm-.5-2h1V18.5H21v-1H18.5V15h-1v2.5H15v1h2.5Z" transform="translate(-1 -3)"/>
+</svg>
