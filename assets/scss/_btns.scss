@@ -46,8 +46,8 @@
         height: 34px;
         //line-height: 31px;
         padding: 0 10px;
-        border-radius: 4px;
-        font-size: 14px;
+        border-radius: 7px;
+        font-size: 12px;
         font-weight: 500;
     }
     &.ty_mid {
@@ -69,6 +69,17 @@
         background-color: $c_key2;
         color: $c_font2;
     }
+    &._blue {
+        background-color: $c_btn;
+        color: #fff;
+        &.disabled {
+            background-color: lighten($c_btn, 30%);
+        }
+        &:hover {
+            background-color: darken($c_btn, 50%);
+        }
+    }
+
     &._og {
         background-color: $c_btn;
         color: #fff;
@@ -76,7 +87,7 @@
             background-color: lighten($c_btn, 30%);
         }
         &:hover {
-            background-color: darken($c_btn, 30%);
+            background-color: darken($c_btn, 50%);
         }
     }
     

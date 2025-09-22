@@ -15,15 +15,16 @@ $m-width : 600px;
 /* colors */
 $colors: (
     _key: #635954, 
-    _key2: #F0E2DA,
+    _key2: #f0e1da,
     _key3: #ab9b92,
     _key4: #69605b,
     _key5: #f5f1ee,
     _key6: #ebe5df,
-    _line: #F1F1F1,
+    _line: #f2f2f2,
     _line2: #e4e4e4,
     _bg: #F2F2F2,
     _bg2: #f5f5f5,
+    _bg3 : #fcfcfc,
     _title: #333D4B,
     _font: #000,
     _font2: #635954,
@@ -62,6 +63,7 @@ $c_line : map-get($colors, _line);
 $c_line2 : map-get($colors, _line2);
 $c_bg : map-get($colors, _bg);
 $c_bg2 : map-get($colors, _bg2);
+$c_bg3 : map-get($colors, _bg3);
 $c_grey : map-get($colors, _grey);
 $c_grey2 : map-get($colors, _grey2);
 $c_desc : map-get($colors, _desc);
@@ -90,7 +92,7 @@ $fz: (
     _6: 18px, 
     _7: 20px, 
     _8: 24px,
-    _9: 32px
+    _9: 29px
 );
 $fz_1 : map-get($fz, _1);
 $fz_2 : map-get($fz, _2);
@@ -432,4 +434,7 @@ $inner: 1280px;
 }
 .cursor_pointer {
     cursor: pointer;
+}
+.ov_h {
+    overflow: hidden;
 }

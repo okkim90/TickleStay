@@ -405,6 +405,82 @@
                 </div>
             </div>
         </main>
+
+        <div class="modal on">
+            <div class="modal_inner">
+                <div class="modal_cont ty_mid2">
+                    <div class="modal_top">
+                        <div class="modal_tit">객실 등록(직접등록)</div>
+                        <button type="button" class="modal_close_btn" onclick="close_modal(this)" aria-label="close modal"></button>
+                        <p class="desc w100">간편하게 여러개의 시설을 한 화면에서 다중 등록이 가능합니다. <br> 시설 등록 후 자동 생성된 QR은 등록후 상세 화면을 통해 확인이 가능합니다.</p>
+                    </div>
+                    <div class="modal_contents ty2">
+                        <div class="tbl_wrap" style="height: 500px;">
+                            <table class="tbl tl_fixed" >
+                                <colgroup>
+                                    <col style="width:60px">
+                                    <col style="width: 160px;">
+                                    <col style="width: 160px;">
+                                    <col>
+                                    <col style="width:140px">
+                                </colgroup>
+                                <caption></caption>
+                                <thead class="fixed_top">
+                                    <tr>
+                                        <th>번호</th>
+                                        <th colspan="2">객실구분</th>
+                                        <th>객실명</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <div class="select-box ty_small">
+                                                <input type="text" class="select-input" value="" placeholder="공간구분 선택" readonly="">
+                                                <div class="options" style="max-height: 200px;">
+                                                    <ul>
+                                                        <li data-value="1" class="option">공간구분</li>
+                                                        <li data-value="2" class="option">공간구분</li>
+                                                        <li data-value="3" class="option">공간구분</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                             <div class="select-box ty_small">
+                                                <input type="text" class="select-input" value=""  placeholder="객실유형 선택" readonly="">
+                                                <div class="options" style="max-height: 200px;">
+                                                    <ul>
+                                                        <li data-value="1" class="option">객실유형</li>
+                                                        <li data-value="2" class="option">객실유형</li>
+                                                        <li data-value="3" class="option">객실유형</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="taL">
+                                            <div class="d_flex _gap4">
+                                                <input type="text" class="f_input ty_small flex1">
+                                                <button class="f_btn ty_small _grey ">객실명 중복 체크</button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="f_btn ty_small _blue _ico _add w100"></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal_bot">
+                        <button type="button" class="f_btn ty_mid _line w_60" onclick="close_modal(this)">닫기</button>
+                        <button type="submit" class="f_btn ty_mid _blue w_100" onclick="close_modal(this)">등록</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!--[D] 로딩 레이어 
         활성화 : 'on' class

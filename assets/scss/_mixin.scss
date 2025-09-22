@@ -1,6 +1,7 @@
 
 
 /*반응형 화면 크기*/
+$breakpoint-ms: 568px;
 $breakpoint-m: 767px;
 $breakpoint-t: 1024px;
 $breakpoint-t2: 1400px;
@@ -31,6 +32,12 @@ $breakpoint-t2: 1400px;
 
 @mixin mobile {
     @media (max-width: #{$breakpoint-m}) {
+        @content;
+    }
+}
+
+@mixin mobile_s {
+    @media (max-width: #{$breakpoint-ms}) {
         @content;
     }
 }

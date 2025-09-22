@@ -417,7 +417,7 @@
     gap: 16px 32px ;
     padding: 16px;
     border-radius: 4px;
-    background-color: $c_key2;
+    background-color: $c_bg3;
     border: 1px solid $c_line;
 }
 
@@ -428,6 +428,7 @@
 
 .f_chk {
     display: inline-flex;
+    //vertical-align: top;
     align-items: center;
     cursor: pointer;
     user-select: none;
@@ -448,18 +449,23 @@
         position: absolute; 
         white-space: nowrap; 
         &:checked ~ .f_chk_ico {
-            background-color: $c_font
+            background-color: $c_key
             
         }
+         &:checked ~ .f_chk_txt {
+            color: $c_key;
+            font-weight: 500;
+         }
     }
     &_ico {
         width: 20px;
         height: 20px;
         
         border-radius: 4px;
-        background-color: lighten($c_font, 65%);
+        background-color: #fff;
         box-sizing: border-box;
-        margin-right: 8px;
+        border: 1px solid $c_key;
+        margin-right: 6px;
         position: relative;
         background-image: url(../images/f_chk.svg);
         background-position: center;
@@ -470,7 +476,11 @@
         font-size: 14px;
         //font-weight: 500;
         flex: 1;
-        @include text-hidden-single
+        @include text-hidden-single;
+
+        &.fz_5 {
+            font-size: $fz_5;
+        }
     }
 }
 

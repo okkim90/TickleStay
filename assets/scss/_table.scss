@@ -49,19 +49,20 @@
     }
     thead {
         th {
-            background-color: #F8F9FB;
+            background-color: $c_key2;
             font-weight: 500;
-            color: $c_font2;
+            color: #000;
+            border-bottom: 2px solid $c_key;
         }
     }
     tbody {
         tr:nth-child(even) {
-            background-color: #F8F9FB;
+            background-color: lighten($c_key2, 8%);
         }
         tr:hover {
-            background-color: #F4F9FF;
+            background-color: lighten($c_key2, 7%);
             td {
-                background-color: #F4F9FF;
+                background-color: lighten($c_key2, 7%);
                 &._blue {
                     background-color: #F0F9FF;
                     color: $c_key;
