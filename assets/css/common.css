@@ -6599,7 +6599,7 @@ input::-webkit-search-results-decoration {
 }
 @media (max-width: 768px) {
   .grid_wrap .sticky_top {
-    top: 80px;
+    top: 70px;
   }
 }
 .grid_wrap .container {
