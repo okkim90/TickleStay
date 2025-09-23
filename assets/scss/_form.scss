@@ -452,10 +452,10 @@
             background-color: $c_key
             
         }
-         &:checked ~ .f_chk_txt {
-            color: $c_key;
-            font-weight: 500;
-         }
+        //  &:checked ~ .f_chk_txt {
+        //     color: $c_key;
+        //     font-weight: 500;
+        //  }
     }
     &_ico {
         width: 20px;

@@ -138,6 +138,9 @@ $inner: 1280px;
     .mw_#{$w} {
         min-width: #{$w}px !important;
     }
+    .maxw_#{$w} {
+        max-width: #{$w}px !important;
+    }
     .h_#{$w} {
         height: #{$w}px;
     
