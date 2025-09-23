@@ -7,6 +7,18 @@
     cursor: pointer;
     z-index: 9;
     border: 1px solid $c_line2;
+    &.not-allowed {
+        
+        border-color: $c_red2;
+        //pointer-events: none;
+        cursor: not-allowed;
+        .options li {
+            color: $c_grey;
+            pointer-events: none;
+            cursor: not-allowed;
+            text-decoration:line-through;
+        }
+    }
     &::after {
         content: '';
         width: 18px;

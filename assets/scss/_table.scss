@@ -1,10 +1,11 @@
 .tbl {
     border-collapse: separate;
+    border-spacing: 0;
     &.tl_fixed {
         table-layout: fixed;
     }
     &_top {
-        margin-bottom: 16px;
+        margin-bottom: 10px;
     }
     &_wrap {
         position: relative;
@@ -48,21 +49,35 @@
         }
     }
     thead {
+
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     width: 100%;
+        //     height: 2px;
+        //     background-color: $c_key;
+        //     bottom: 0;
+        // }
         th {
             background-color: $c_key2;
             font-weight: 500;
             color: #000;
-            border-bottom: 2px solid $c_key;
+            
+        }
+        tr:last-child > th,
+        th[rowspan] {
+            box-shadow: inset 0 -2px 0 0 $c_key;
+        
         }
     }
     tbody {
-        tr:nth-child(even) {
-            background-color: lighten($c_key2, 8%);
-        }
+        // tr:nth-child(even) {
+        //     background-color: lighten($c_key2, 7%);
+        // }
         tr:hover {
-            background-color: lighten($c_key2, 7%);
+            background-color: lighten($c_key2, 8%);
             td {
-                background-color: lighten($c_key2, 7%);
+                background-color: lighten($c_key2, 8%);
                 &._blue {
                     background-color: #F0F9FF;
                     color: $c_key;

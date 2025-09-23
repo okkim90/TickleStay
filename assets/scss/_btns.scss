@@ -262,6 +262,11 @@
     border-radius: 8px;
     flex-shrink: 0;
     vertical-align: middle;
+    &.ty_small {
+        width: 34px;
+        height: 34px;
+        background-size: 96%;
+    }
     &._srch {
         background-image: url(../images/ico_search.svg);
         border: 1px solid $c_line2;
@@ -295,6 +300,18 @@
             background-color: $c_red3;
         }
     }
+    &._del2 {
+        background-image: url(../images/ico_del.svg);
+        
+        background-color: lighten($c_red3, 4%) ;
+        
+        &:hover {
+            background-color: $c_red3;
+        }
+        &.on {
+            background-color: $c_red3;
+        }
+    }
     &._drag {
         background-image: url(../images/ico_drag.svg);
         opacity: 0.6;
@@ -314,10 +331,10 @@
         }
     }
     &._back {
-        background-color: #E2EDFF;
+        background-color: $c_key5;
         background-image: url(../images/arrow_back_blue.svg);
         &:hover {
-            background-color: darken(#E2EDFF, 4%);
+            background-color: lighten($c_key5, 4%);
         }
     }
 }
