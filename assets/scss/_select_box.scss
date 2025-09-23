@@ -12,6 +12,10 @@
         border-color: $c_red2;
         //pointer-events: none;
         cursor: not-allowed;
+        &.on {
+            border-color: $c_red2;
+        }
+         
         .options li {
             color: $c_grey;
             pointer-events: none;

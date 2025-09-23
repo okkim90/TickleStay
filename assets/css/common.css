@@ -8545,6 +8545,9 @@ input::-webkit-search-results-decoration {
   border-color: #FF5B5B;
   cursor: not-allowed;
 }
+.select-box.not-allowed.on {
+  border-color: #FF5B5B;
+}
 .select-box.not-allowed .options li {
   color: #9D9D9D;
   pointer-events: none;
