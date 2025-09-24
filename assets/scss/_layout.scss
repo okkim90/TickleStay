@@ -513,17 +513,25 @@
         overflow: hidden;
         .sorting_sec {
             margin-bottom: 50px;
+          
+           
             @include mobile {
                 margin-bottom: 30px;
+                .select-box {
+                    width: 100%;
+                }
             }
         }
         .cont {
             padding: 15px;
             border-radius: 8px;
-            background-color: #fff;
-            border: 1px solid $c_line;
+            background-color: #fff;        
+            border: 1px solid $c_line2;
             &.ty2 {
                 padding-bottom: 30px;
+            }
+            &.ty_monitoring {
+                border-top-left-radius: 0;
             }
         }
         .sec {
@@ -559,8 +567,19 @@
                 left: 0;
                 top: 70px;
             }
-            @include mobile { 
-               
+            @include mobile_s { 
+               .reset_box {
+                    width: 100%;
+                    flex: none;
+                    //display: block;
+                    &_txt {
+                        align-self: auto;
+                    }
+                    // &_cont {
+                    //     margin-left: 0;
+                    //     margin-top: 6px;
+                    // }
+               }
             }
             .btn_set {
                 display: flex;
@@ -570,7 +589,29 @@
     }
 }
 
-
+.nav_tabs {
+    display: flex;
+    .nav_tab {
+        border-radius: 10px 10px 0 0;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 148px;
+        background-color: #e8e8e8;
+        color: $c_font3;
+        font-size: $fz_6;
+        font-weight: 500;
+        &:hover {
+            background-color: #e5e5e5;
+        }
+        &.on {
+            background-color: $c_key2;
+            color: $c_key;
+            
+        }
+    }
+}
 
 
 
@@ -1867,12 +1908,16 @@
             opacity: 0;
             transition: opacity .1s ease-in-out;
         }
-        &.on , &:hover {
-            border-color: transparent;
-            &::after {
-               opacity: 1;
+
+        @include hover_true {
+            &:hover {
+                border-color: transparent;
+                &::after {
+                opacity: 1;
+                }
             }
         }
+         
         .number {
             font-size: $fz_5;
             color: $c_font3;
@@ -1921,3 +1966,266 @@
     }
 }
 
+.monitoring_list {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    @include tablet {
+        @include flex_col(4, 16px, 16px);
+    }
+
+    @include mobile {
+        @include flex_col(3, 10px, 16px);
+    }
+    @include mobile_s {
+        @include flex_col(2, 10px, 16px);
+    }
+    &_item {
+        display: flex;
+        width: 180px;
+    }
+}
+
+
+.monitoring_box {
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    border: 1px solid $c_line2;
+    border-radius: 10px;
+    padding: 10px;
+    line-height: 1.17;
+    background-color: rgba($c_bg, .2);
+    position: relative;
+
+    user-select: none;
+
+     &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border: 2px solid #3C3734;
+        border-radius: 10px;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .1s ease-in-out;
+    }
+
+    @include hover_true {
+        &:hover {
+            border-color: transparent;
+            &::after {
+            opacity: 1;
+            }
+        }
+    }
+    
+    &:has(.sel:checked) {
+        background-color: $c_key;
+        border-color: #3C3734;
+        .btn_cancel {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .btn_cancel {
+        visibility: hidden;
+        opacity: 0;
+        transition: all .1s ease-in-out;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        background-color: #3C3734;
+        font-size: $fz_1;
+        font-weight: 500;
+        color: #fff;
+        position: absolute;
+        right: 7px;
+        bottom: 7px;
+    }
+
+    &_info {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 20px;
+        .num {
+            font-size: $fz_5;
+            color: $c_font3;
+            font-weight: 500;
+            @at-root .monitoring_box:has(.sel:checked) & {
+                color: #fff;
+            }
+        }
+        .tag {
+            
+            margin-left: auto;
+            width: 54px;
+            height: 20px;
+            box-sizing: border-box;
+            font-size: $fz_1;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            font-weight: 500;
+            &.ty_working {
+                background-color: $c_key2;
+                color: $c_key;
+            }
+            &.ty_finish {
+                border: 1px solid $c_line2;
+                background-color: #fff;
+            }
+        }
+        .type {
+            width: 100%;
+            font-size: $fz_1;
+            font-weight: 500;
+            color: #000;
+            margin-top: 2px;
+            @at-root .monitoring_box:has(.sel:checked) & {
+                color: #ffb996;
+            }
+        }
+    }
+    &_workers {
+        display: flex;
+        gap: 6px;
+        width: 100%;
+        flex-wrap: wrap;
+        .worker {
+            font-size: $fz_6;
+            font-weight: 500;
+            color: $c_font3;
+            @include mobile { 
+                font-size: $fz_4;
+            }
+            @at-root .monitoring_box:has(.sel:checked) & {
+                color: #fff;
+            }
+        }
+    }
+    &_works {
+        display: flex;
+        gap: 6px;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 4px;
+        padding-right: 35px;
+        .work {
+            font-size: $fz_6;
+            font-weight: bold;
+            color: $c_key;
+            @include mobile { 
+                font-size: $fz_4;
+            }
+            @at-root .monitoring_box:has(.sel:checked) & {
+                color: $c_key2;
+            }
+        }
+    }
+    &_lost {
+        display: inline-flex;
+        font-size: $fz_3;
+        font-weight: bold;
+        color: $c_red;
+        border-bottom: 1px solid $c_red;
+        margin-top: 9px;
+        @include mobile { 
+            font-size: $fz_2;
+        }
+
+        @at-root .monitoring_box:has(.sel:checked) & {
+            color: #ffda3b;
+            border-bottom: 1px solid #ffda3b;
+        }
+        &::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url(../images/ico_pack/icon_lost.svg);
+            margin-right: 1px;
+            @at-root .monitoring_box:has(.sel:checked) & {
+                background-image: url(../images/ico_pack/icon_lost_on.svg);
+            }
+        }
+    }
+}
+
+.assignment_box {
+
+    &_sec {
+        height: 90px;
+        
+    }
+    position: fixed;
+    z-index: 99;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $c_key;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+   
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(#000, .6);
+
+    @include mobile { 
+        width: 100%;
+        flex-wrap: wrap;
+        bottom: 0;
+        border-radius: 10px 10px 0 0;
+        padding-bottom: 20px;
+    }
+
+    &_tit {
+        font-size: $fz_6;
+        font-weight: bold;
+        color: #fff;  
+        @include mobile { 
+            order: 0;
+        }
+    }
+    &_select {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        .select-box {
+            
+            width: 180px;
+            @include mobile { 
+                flex: 1;
+            }
+        }
+        @include mobile { 
+            order: 2;
+            width: 100%;
+        }
+    }
+    &_btns {
+        display: flex;
+        gap: 6px;
+        .f_btn {
+            width: 60px;
+        }
+        @include mobile { 
+            order: 1;
+            margin-left: auto;
+        }
+    }
+}

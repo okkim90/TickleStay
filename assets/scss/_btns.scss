@@ -42,12 +42,20 @@
         pointer-events: none;
         opacity: 0.6;
     }
+    &.ty_xsmall {
+        height: 30px;
+        //line-height: 31px;
+        padding: 0 10px;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 500;
+    }
     &.ty_small {
         height: 34px;
         //line-height: 31px;
         padding: 0 10px;
         border-radius: 7px;
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 500;
     }
     &.ty_mid {
@@ -67,7 +75,10 @@
     
     &._key2 {
         background-color: $c_key2;
-        color: $c_font2;
+        color: $c_key7;
+        &:hover {
+            background-color: darken($c_key2, 5%);
+        }
     }
     &._blue {
         background-color: $c_btn;
@@ -101,6 +112,15 @@
         &.disabled {
             color: lighten($c_grey2, 40%);
         }
+    }
+     &._lightGrey {
+        background-color: $c_lightGrey;
+        color: $c_font;
+        
+        &:hover {
+            background-color: color.scale($c_lightGrey, $lightness: 20%);
+        }
+        
     }
     &._red {
         background-color: $c_red2;
@@ -252,6 +272,10 @@
     width: 30px;
     height: 30px;
     background: url(../images/ico_reset.svg) center center no-repeat;
+    border-radius: 6px;
+    &:hover {
+        background-color: lighten($c_key, 49%);
+    }
 }
 
 .btn_ico {

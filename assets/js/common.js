@@ -58,18 +58,28 @@ document.addEventListener('DOMContentLoaded', function() {
     selectBoxes.forEach(e=>{
       if(e.querySelector('.f_chk')){
         let selectInput = e.querySelector('.select-input');
-        let chked = e.querySelectorAll('.f_chk input[type=checkbox]:checked');
-        let chkCount = chked.length;
-        let arr= []
-        chked.forEach((chk)=>{
-            arr.push(chk.closest('.f_chk').querySelector('.f_chk_txt').textContent)
-        })
-        
-        if(chkCount > 0){
-          selectInput.value = chkCount + '개 선택' + ' ('+ arr.join(', ') +')' 
-        }else{
-          selectInput.value = '';
-        }
+        let chkbox = e.querySelectorAll('.f_chk input[type=checkbox]');
+
+       const updateValue = () => {
+          let chked = e.querySelectorAll('.f_chk input[type=checkbox]:checked');
+          let chkCount = chked.length;
+
+          let arr = [];
+          chked.forEach(c => {
+            arr.push(c.closest('.f_chk').querySelector('.f_chk_txt').textContent);
+          });
+
+          if (chkCount > 0) {
+            selectInput.value = chkCount + '개 선택 (' + arr.join(', ') + ')';
+          } else {
+            selectInput.value = '';
+          }
+        };
+
+         updateValue();
+         chkbox.forEach(chk => {
+          chk.addEventListener('change', updateValue);
+        });
       }
     });
 
