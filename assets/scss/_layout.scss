@@ -617,6 +617,10 @@
 
 .bd_box {
     border: 1px solid $c_line;
+    background-color: #fff;
+    &._line2 {
+        border-color: $c_line2;
+    }
     &.ty_small {
         padding: 16px;
         border-radius: 8px;
@@ -2228,4 +2232,12 @@
             margin-left: auto;
         }
     }
+}
+
+.monitoring_sorting_sec {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 32px;
+    width: 100%;
 }

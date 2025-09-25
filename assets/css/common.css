@@ -539,6 +539,18 @@
   border-color: #FFF1F1;
 }
 
+.fc_blue {
+  color: #0c59d8;
+}
+
+.bg_blue {
+  background-color: #0c59d8;
+}
+
+.bd_blue {
+  border-color: #0c59d8;
+}
+
 .fc_bg_blue {
   color: #F0F9FF;
 }
@@ -588,15 +600,15 @@
 }
 
 .fc_green {
-  color: #17993A;
+  color: #2F7D31;
 }
 
 .bg_green {
-  background-color: #17993A;
+  background-color: #2F7D31;
 }
 
 .bd_green {
-  border-color: #17993A;
+  border-color: #2F7D31;
 }
 
 .fc_green_l {
@@ -5564,6 +5576,9 @@
 .d_flex.fw_w {
   flex-wrap: wrap;
 }
+.d_flex.fw_w_r {
+  flex-wrap: wrap-reverse;
+}
 .d_flex.ai_t {
   align-items: flex-start;
 }
@@ -6745,6 +6760,10 @@ input::-webkit-search-results-decoration {
 
 .bd_box {
   border: 1px solid #f2f2f2;
+  background-color: #fff;
+}
+.bd_box._line2 {
+  border-color: #e4e4e4;
 }
 .bd_box.ty_small {
   padding: 16px;
@@ -8393,6 +8412,14 @@ input::-webkit-search-results-decoration {
   }
 }
 
+.monitoring_sorting_sec {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 32px;
+  width: 100%;
+}
+
 .footer {
   color: #635954;
   border-top: 1px solid #f2f2f2;
@@ -9447,10 +9474,15 @@ input::-webkit-search-results-decoration {
   height: 24px;
   background-image: url(../images/ico_qr.svg);
 }
+.f_btn._ico._excel {
+  background-color: #2F7D31;
+  color: #fff;
+}
 .f_btn._ico._excel::before {
-  width: 24px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
   background-image: url(../images/ico_excel.svg);
+  background-size: contain;
 }
 
 .chk_btn {
@@ -9597,6 +9629,20 @@ input::-webkit-search-results-decoration {
 }
 .f_switch_btn + .f_switch_btn {
   border-left: 1px solid #635954;
+}
+
+.monitoring_tab_sec {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: flex-end;
+  gap: 16px 10px;
+}
+.monitoring_tab_sec .nav_tabs {
+  flex: 1 1 auto;
+}
+.monitoring_tab_sec .btn_area {
+  flex: 0 0 auto;
+  margin-left: auto;
 }
 
 .title1 {
@@ -10181,7 +10227,7 @@ input::-webkit-search-results-decoration {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #FFD2D2;
+  background-color: #e2e2e2;
   transition: all 0.2s ease-in-out;
   border-radius: 22px;
 }
@@ -10196,13 +10242,13 @@ input::-webkit-search-results-decoration {
   visibility: hidden;
   opacity: 0;
   transform: translateY(-100%);
-  color: #635954;
+  color: #3c3734;
 }
 .f_toggle .slider_txt.false {
   padding: 0 8px 0 23px;
   visibility: visible;
   opacity: 1;
-  color: #FF5B5B;
+  color: #ABABAB;
 }
 .f_toggle .slider:before {
   position: absolute;
@@ -10211,7 +10257,7 @@ input::-webkit-search-results-decoration {
   width: 16px;
   left: 3px;
   bottom: 3px;
-  background-color: #FF5B5B;
+  background-color: #ABABAB;
   transition: all 0.2s ease-in-out;
   border-radius: 50%;
 }
@@ -10482,13 +10528,13 @@ input::-webkit-search-results-decoration {
   text-align: center;
 }
 .ui-datepicker .ui-state-default:hover {
-  background-color: #EAEBFE;
+  background-color: rgb(247.3557692308, 239.7115384615, 236.1442307692);
   border-radius: 50%;
 }
 .ui-datepicker .ui-state-highlight,
 .ui-datepicker .ui-widget-content .ui-state-highlight,
 .ui-datepicker .ui-widget-header .ui-state-highlight {
-  color: #0B02B8;
+  color: #635954;
   font-weight: bold;
 }
 .ui-datepicker .ui-state-active,
@@ -10499,9 +10545,9 @@ input::-webkit-search-results-decoration {
 .ui-datepicker .ui-button.ui-state-active:hover {
   border-radius: 50%;
   box-sizing: border-box;
-  background: #EAEBFE;
+  background: #f0e1da;
   font-weight: 700;
-  color: #3F36F4;
+  color: #3c3734;
 }
 
 .tbl {

@@ -39,20 +39,20 @@
     .ui-button { display: flex; justify-content: center; align-items: center; width: 30px; height: 30px; margin: 0 auto; padding: 0; border: none; box-sizing: border-box; background: none; font-weight: 400; color: #000; text-align: center; }
 
     .ui-state-default:hover {
-        background-color: #EAEBFE;
+        background-color: lighten($c_key2, 5%);
         border-radius: 50%;
     }
 
     .ui-state-highlight,
     .ui-widget-content .ui-state-highlight,
-    .ui-widget-header .ui-state-highlight { color: #0B02B8; font-weight: bold;}
+    .ui-widget-header .ui-state-highlight { color: $c_key; font-weight: bold;}
 
     .ui-state-active,
     .ui-widget-content .ui-state-active,
     .ui-widget-header .ui-state-active,
     a.ui-button:active,
     .ui-button:active,
-    .ui-button.ui-state-active:hover { border-radius: 50%; box-sizing: border-box; background: #EAEBFE; font-weight: 700; color: #3F36F4; }
+    .ui-button.ui-state-active:hover { border-radius: 50%; box-sizing: border-box; background: $c_key2; font-weight: 700; color: $c_key7; }
 
 
 

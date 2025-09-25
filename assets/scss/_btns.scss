@@ -237,10 +237,14 @@
         }
         &._excel {
             &::before {
-                width: 24px;
-                height: 25px;
+                width: 22px;
+                height: 22px;
                 background-image: url(../images/ico_excel.svg);
+                background-size: contain;
             }
+            background-color: $c_green;
+            color: #fff;
+
         }
     }
 }
@@ -392,5 +396,19 @@
         & + & {
             border-left: 1px solid $c_key;
         }
+    }
+}
+
+.monitoring_tab_sec {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: flex-end;
+    gap: 16px 10px;
+    .nav_tabs {
+        flex: 1 1 auto;  
+    }
+    .btn_area {
+        flex: 0 0 auto;
+        margin-left: auto;
     }
 }

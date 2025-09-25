@@ -40,11 +40,12 @@ $colors: (
     _red2: #FF5B5B,
     _red3: #FFD2D2,
     _bg_red: #FFF1F1,
+    _blue: #0c59d8,
     _bg_blue: #F0F9FF,
     _yellow: #FCA004,
     _yellow2: #FFF6E6,
     _yellow3: #F96400,
-    _green: #17993A,
+    _green: #2F7D31,
     _green_l: #EFFBF2,
     _dim: rgba(#000,.3),
     _placeholder: #CBCBCB,
@@ -291,6 +292,9 @@ $inner: 1280px;
     } 
     &.fw_w {
         flex-wrap: wrap;
+    }
+    &.fw_w_r {
+        flex-wrap: wrap-reverse;
     }
     &.ai_t {
         align-items: flex-start;
