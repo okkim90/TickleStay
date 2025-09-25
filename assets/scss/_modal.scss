@@ -66,6 +66,7 @@
        
         padding: 30px 30px 16px;
         padding-right: 60px;
+        border-bottom: 1px solid $c_line;
         @include mobile { 
             padding: 20px 20px 16px;
             padding-right: 50px;

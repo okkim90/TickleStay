@@ -6962,10 +6962,10 @@ input::-webkit-search-results-decoration {
   border-radius: 16px;
 }
 .branch_list_item .item_inner {
-  padding: 32px 32px 16px;
+  padding: 20px 20px 16px;
 }
 .branch_list_item .bot_btns {
-  padding: 16px 32px;
+  padding: 16px 20px;
   border-top: 1px solid #f2f2f2;
   display: flex;
   justify-content: flex-end;
@@ -6977,7 +6977,7 @@ input::-webkit-search-results-decoration {
 }
 .branch_list_item .tit_area .tit {
   flex: 1;
-  font-size: 24px;
+  font-size: 20px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -6993,7 +6993,7 @@ input::-webkit-search-results-decoration {
     gap: 16px 16px;
   }
   .branch_list .col_item {
-    width: calc(33.3333333333% - 10.6666666667px);
+    width: calc(50% - 8px);
   }
 }
 @media (max-width: 1024px) {
@@ -8783,6 +8783,7 @@ input::-webkit-search-results-decoration {
 .modal_top {
   padding: 30px 30px 16px;
   padding-right: 60px;
+  border-bottom: 1px solid #f2f2f2;
 }
 @media (max-width: 768px) {
   .modal_top {

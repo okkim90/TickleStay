@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TickleOn</title>
+    <!--[D] datepicker js&css-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            // datepicker
+            $.datepicker.regional['ko'] = {
+                closeText: '닫기',
+                prevText: '이전달',
+                nextText: '다음달',
+                currentText: '오늘',
+                monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+                dayNames: ['일','월','화','수','목','금','토'],
+                dayNamesShort: ['일','월','화','수','목','금','토'],
+                dayNamesMin: ['일','월','화','수','목','금','토'],
+                weekHeader: 'Wk',
+                dateFormat: 'yy-mm-dd(D)',
+                firstDay: 0,
+                isRTL: false,
+                showMonthAfterYear: true,
+                changeMonth: true,
+                changeYear: true
+            };
+            $.datepicker.setDefaults($.datepicker.regional['ko']);
+            $(".datepicker").datepicker();
+        });
+        //오늘 선택
+        function set_today(target){
+            let date_set = $(target).parents('.date_set');
+            let datepicker = date_set.find('.datepicker'); 
+            datepicker.datepicker('setDate', 'today');
+        }
+    </script>
+    <!--//[D] datepicker js&css-->
+
+    <!--[D] 공통척용 js&css-->
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+<body>
+    <div id="wrap" class="grid_wrap">
+        <header id="header" class="header">
+            <div class="m_header">
+                <h1><a href=""><img src="../assets/images/logo.svg" alt="TickleOn"></a> </h1>
+                <button type="button" class="btn_nav"></button>
+            </div>
+            <div class="header_cont">
+                <div class="hd_company">
+                    <div class="hd_company_item dep1"> 
+                        <span class="txt">회사명회사명회사명회사명회사명회사명</span>    
+                    </div>
+                    <div class="hd_company_item select-box ty_mid ">
+                        <input type="text" class="select-input" value="" placeholder="지점을 선택해주세요" readonly>
+                        <div class="options ty_right">
+                            <ul>
+                                <li data-value="1" class="option">서울지점</li>
+                                <li data-value="2" class="option">경기지점</li>
+                                <li data-value="3" class="option">강원지점</li>
+                            </ul>
+                            <button type="button" class="f_btn ty_mid _key2 w100" onclick="event.stopPropagation();">지점 관리</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hd_user">
+                    <div class="hd_user_name">
+                        <strong class="name">이상부</strong> 님
+                    </div>
+                    <button type="button" class="btn_logout">로그아웃</button>
+                </div>
+            </div>
+        </header>
+        <aside class="nav fixed">
+            <div class="nav_top">
+                <a href="" class="nav_top_logo"></a>
+                
+            </div>
+            <nav class="nav_wrap">
+                <div class="nav_btn_box">
+                    <button type="button" class="nav_toggle" aria-label="nav_toggle"></button>
+                    <button type="button" class="nav_close" aria-label="nav_toggle"></button>
+                </div>
+                <ul class="nav_list dep1">
+                    <li class="nav_dep1">
+                        <a href="" class="nav_btn dep1">
+                            <i class="nav_ico ico_menu1"></i>
+                            <span class="txt">모니터링</span>
+                        </a>
+                    </li>
+                    <li class="nav_dep1 has_dep">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu2"></i>
+                            <span class="txt">공간관리</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실관리</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">시설관리</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_dep1 has_dep">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu3"></i>
+                            <span class="txt">수행작업관리</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2 on">객실작업관리</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">시설작업관리</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_dep1 has_dep">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu4"></i>
+                            <span class="txt">계정관리</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">계정관리 하위메뉴</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">계정관리 하위메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_dep1 has_dep">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu5"></i>
+                            <span class="txt">통계</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실 작업 수행 현황</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">작업자별 수행 현황</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실 소모품 사용 현황</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_dep1 has_dep">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu6"></i>
+                            <span class="txt">설정</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실 유형</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실 소모품 유형</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실 작업 유형</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </aside>
+        <main id="container" class="container">
+            <div class="sub_tit">
+                <h1 class="title1">지점 관리</h1>
+                <div class="btn_set ml_auto">
+                    <button class="f_btn ty_mid _blue _ico _add">지점 등록</button>
+                </div> 
+            </div>
+            <div class="top_set">
+                <form class="srch_box ml_auto">
+                    <div class="srch_set">
+                        <input type="text" class="f_input ty_mid2 w100" placeholder="시설명을 검색해주세요">
+                        
+                        <!--[D] 검색어 입력시 검색어 삭제 버튼
+                            활성화 : 'on' class
+                        -->
+                        <button type="button" class="srch_close on"></button>
+                        
+                        <!--[D] 검색어 입력시 검색어 자동완성 미리보기가 있을 경우 리스트 노출 
+                            활성화 : 'on' class
+                        -->
+                        <ul class="srch_list on">
+                            <li class="srch_list_item">
+                                <div class="txt"><span class="fc_key">티클</span> 청소</div> 
+                            </li>
+                            <li class="srch_list_item">
+                                <div class="txt"><span class="fc_key">티클</span> 전문</div> 
+                            </li>
+                            <li class="srch_list_item">
+                                <div class="txt"><span class="fc_key">티클</span> 공간관리</div> 
+                            </li>
+                            <li class="srch_list_item">
+                                <div class="txt"><span class="fc_key">티클</span> 엄청긴 검색어일때엄청긴 검색어일때엄청긴 검색어일때엄청긴 검색어일때엄청긴 검색어일때</div> 
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="submit" class="srch_box_btn btn_ico _srch" aria-label="search"></button> 
+                </form>
+            </div>
+            <ul class="branch_list">
+                <li class="branch_list_item col_item">
+                    <div class="item_inner">
+                        <span class="date fz_1 fc_grey">20240819 UPDATE</span>
+                        <div class="tit_area">
+                            <p class="tit">삼성 서울지점삼성 서울지점성 서울지점삼성 서울지점</p>
+                            <div class="utils">
+                                <button type="button" class="btn_ico _edit" aria-label="edit"></button>
+                                <button type="button" class="btn_ico _del" aria-label="delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot_btns">
+                        <a href="" class="f_btn ty_mid _blue w_130">방문하기</a>
+                    </div>
+                </li>
+                <li class="branch_list_item col_item">
+                    <div class="item_inner">
+                        <span class="date fz_1 fc_grey">20240819 UPDATE</span>
+                        <div class="tit_area">
+                            <p class="tit">삼성 서울지점삼성 서울지점성 서울지점삼성 서울지점</p>
+                            <div class="utils">
+                                <button type="button" class="btn_ico _edit" aria-label="edit"></button>
+                                <button type="button" class="btn_ico _del" aria-label="delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot_btns">
+                        <a href="" class="f_btn ty_mid _blue w_130">방문하기</a>
+                    </div>
+                </li>
+                <li class="branch_list_item col_item">
+                    <div class="item_inner">
+                        <span class="date fz_1 fc_grey">20240819 UPDATE</span>
+                        <div class="tit_area">
+                            <p class="tit">삼성 서울지점삼성 서울지점</p>
+                            <div class="utils">
+                                <button type="button" class="btn_ico _edit" aria-label="edit"></button>
+                                <button type="button" class="btn_ico _del" aria-label="delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot_btns">
+                        <a href="" class="f_btn ty_mid _blue w_130">방문하기</a>
+                    </div>
+                </li>
+                <li class="branch_list_item col_item">
+                    <div class="item_inner">
+                        <span class="date fz_1 fc_grey">20240819 UPDATE</span>
+                        <div class="tit_area">
+                            <p class="tit">삼성 서울지점삼성 서울지점</p>
+                            <div class="utils">
+                                <button type="button" class="btn_ico _edit" aria-label="edit"></button>
+                                <button type="button" class="btn_ico _del" aria-label="delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot_btns">
+                        <a href="" class="f_btn ty_mid _blue w_130">방문하기</a>
+                    </div>
+                </li>
+                <li class="branch_list_item col_item">
+                    <div class="item_inner">
+                        <span class="date fz_1 fc_grey">20240819 UPDATE</span>
+                        <div class="tit_area">
+                            <p class="tit">삼성 서울지점삼성 서울지점</p>
+                            <div class="utils">
+                                <button type="button" class="btn_ico _edit" aria-label="edit"></button>
+                                <button type="button" class="btn_ico _del" aria-label="delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot_btns">
+                        <a href="" class="f_btn ty_mid _blue w_130">방문하기</a>
+                    </div>
+                </li>
+                <li class="branch_list_item col_item">
+                    <div class="item_inner">
+                        <span class="date fz_1 fc_grey">20240819 UPDATE</span>
+                        <div class="tit_area">
+                            <p class="tit">삼성 서울지점삼성 서울지점</p>
+                            <div class="utils">
+                                <button type="button" class="btn_ico _edit" aria-label="edit"></button>
+                                <button type="button" class="btn_ico _del" aria-label="delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot_btns">
+                        <a href="" class="f_btn ty_mid _blue w_130">방문하기</a>
+                    </div>
+                </li>
+                <li class="branch_list_item col_item">
+                    <div class="item_inner">
+                        <span class="date fz_1 fc_grey">20240819 UPDATE</span>
+                        <div class="tit_area">
+                            <p class="tit">삼성 서울지점삼성 서울지점</p>
+                            <div class="utils">
+                                <button type="button" class="btn_ico _edit" aria-label="edit"></button>
+                                <button type="button" class="btn_ico _del" aria-label="delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot_btns">
+                        <a href="" class="f_btn ty_mid _blue w_130">방문하기</a>
+                    </div>
+                </li>
+                <li class="branch_list_item col_item">
+                    <div class="item_inner">
+                        <span class="date fz_1 fc_grey">20240819 UPDATE</span>
+                        <div class="tit_area">
+                            <p class="tit">삼성 서울지점삼성 서울지점</p>
+                            <div class="utils">
+                                <button type="button" class="btn_ico _edit" aria-label="edit"></button>
+                                <button type="button" class="btn_ico _del" aria-label="delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot_btns">
+                        <a href="" class="f_btn ty_mid _blue w_130">방문하기</a>
+                    </div>
+                </li>
+                <li class="branch_list_item col_item">
+                    <div class="item_inner">
+                        <span class="date fz_1 fc_grey">20240819 UPDATE</span>
+                        <div class="tit_area">
+                            <p class="tit">삼성 서울지점삼성 서울지점</p>
+                            <div class="utils">
+                                <button type="button" class="btn_ico _edit" aria-label="edit"></button>
+                                <button type="button" class="btn_ico _del" aria-label="delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot_btns">
+                        <a href="" class="f_btn ty_mid _blue w_130">방문하기</a>
+                    </div>
+                </li>
+                <li class="branch_list_item col_item">
+                    <div class="item_inner">
+                        <span class="date fz_1 fc_grey">20240819 UPDATE</span>
+                        <div class="tit_area">
+                            <p class="tit">삼성 서울지점삼성 서울지점</p>
+                            <div class="utils">
+                                <button type="button" class="btn_ico _edit" aria-label="edit"></button>
+                                <button type="button" class="btn_ico _del" aria-label="delete"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bot_btns">
+                        <a href="" class="f_btn ty_mid _blue w_130">방문하기</a>
+                    </div>
+                </li>
+            </ul>
+        </main>
+        <div class="modal on">
+            <div class="modal_inner">
+                <div class="modal_cont ty_small">
+                   
+                    <div class="modal_top">
+                        <div class="modal_tit">지점 수정</div>
+                        <button type="button" class="modal_close_btn" onclick="close_modal(this)" aria-label="close modal"></button>
+                    </div>
+                    <div class="modal_contents">
+                        <div class="form_set">
+                            <label class="form_set_tit">지점명 <i class="ico_required">*</i></label>
+                            <div class="input_wrap">
+                                <input type="text" class="f_input ty_mid2 w100 has_count" value="지점명" placeholder="지점명을 등록해주세요" max-length="50">
+                                <span class="count">0/50</span>
+                            </div>
+                        </div>   
+                        <div class="form_set">
+                            <label class="form_set_tit">주소 <i class="ico_required">*</i></label>
+                            <div class="d_flex fw_w _gap7">
+                                <input type="text" class="f_input ty_mid2 flex1 w100" value="주소1주소1주소1주소1" readonly>
+                                <button type="button" class="f_btn ty_mid _line shrink0">주소찾기</button>
+                                <input type="text" class="f_input ty_mid2 w100" value="상세주소 상세주소 상세주소 상세주소" placeholder="나머지 상세 주소를 등록해주세요">
+                            </div>
+                        </div>  
+                        <div class="form_set">
+                            <label class="form_set_tit">사용 층수 <i class="ico_required">*</i></label>
+                            <ul class="floor_list">
+                                <li class="floor_list_item">
+                                    <span class="btn_ico _drag"></span>
+                                    <input type="text" value="1층" class="f_input ty_mid2 flex1 w100" readonly>
+                                    <button type="button" class="btn_ico _edit" aria-label="edit"></button>
+                                    <button type="button" class="btn_ico _del" aria-label="delete"></button>
+                                </li>
+                                <li class="floor_list_item">
+                                    <span class="btn_ico _drag"></span>
+                                    <input type="text" value="2층" class="f_input ty_mid2 flex1 w100">
+                                    <button type="button" class="btn_ico _edit on" aria-label="edit"></button>
+                                    <!--[D] 수정아이콘 클릭시 'on' class 로 활성화 -->
+                                    <button type="button" class="btn_ico _del" aria-label="delete"></button>
+                                </li>
+                            </ul>
+                            <div class="d_flex mt12 _gap8">
+                                <div class="input_wrap flex1">
+                                    <input type="text" class="f_input ty_mid2 w100 has_count " placeholder="층수 옵션을 등록해주세요" max-length="30">
+                                    <span class="count">0/30</span>
+                                </div>
+                                <button type="button" class="btn_ico _add"></button>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="modal_bot">
+                        <button type="button" class="f_btn ty_mid _line w_60" onclick="close_modal(this)">취소</button>
+                        <button type="submit" class="f_btn ty_mid _blue w_100">수정</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--[D] 로딩 레이어 
+        활성화 : 'on' class
+    -->
+    <div class="loader_layer">
+        <span class="loader"></span>
+    </div>
+    <!--[D] 로딩 레이어 -->
+</body>
+</html>

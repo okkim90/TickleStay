@@ -806,10 +806,10 @@
         background-color: #fff;
         border-radius: 16px;
         .item_inner {
-            padding: 32px 32px 16px;
+            padding: 20px 20px 16px;
         }
         .bot_btns {
-            padding: 16px 32px;
+            padding: 16px 20px;
             border-top: 1px solid $c_line;
             display: flex;
             justify-content: flex-end;
@@ -820,7 +820,7 @@
             gap: 10px;
             .tit {
                 flex: 1;
-                font-size: $fz_8;
+                font-size: $fz_7;
                 @include text-hidden-single;
                 
             }
@@ -831,7 +831,7 @@
         }
     }
     @include tablet2 {
-        @include flex_col(3, 16px, 16px);
+        @include flex_col(2, 16px, 16px);
     }
     @include tablet {
         @include flex_col(2, 16px, 16px);
