@@ -290,6 +290,10 @@
     border-radius: 8px;
     flex-shrink: 0;
     vertical-align: middle;
+    &._line {
+        border: 1px solid $c_line2;
+        background-color: #fff;
+    }
     &.ty_small {
         width: 34px;
         height: 34px;
@@ -312,12 +316,14 @@
     }
     &._edit {
         background-image: url(../images/ico_edit.svg);
+        
         &:hover {
             background-color: $c_bg;
         }
         &.on {
             background-color: $c_bg;
         }
+
     }
     &._del {
         background-image: url(../images/ico_del.svg);

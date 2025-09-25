@@ -71,13 +71,13 @@
         }
     }
     tbody {
-        // tr:nth-child(even) {
-        //     background-color: lighten($c_key2, 7%);
-        // }
+        tr:nth-child(even) {
+            background-color: color.scale($c_key2, $lightness:80%);
+        }
         tr:hover {
-            background-color: lighten($c_key2, 8%);
+            background-color: color.scale($c_key,$lightness:95%, $saturation: 90%);
             td {
-                background-color: lighten($c_key2, 8%);
+                background-color: color.scale($c_key,$lightness:95%, $saturation: 90%);
                 &._blue {
                     background-color: #F0F9FF;
                     color: $c_key;

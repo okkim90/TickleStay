@@ -51,6 +51,7 @@ $colors: (
     _placeholder: #CBCBCB,
     _kakao: #F9E000,
     _kakao_ov: #E8D000,
+    _orange: #FF7200,
     _white : #fff,
     _btn : #3a3532
 );
@@ -77,6 +78,7 @@ $c_red : map-get($colors, _red);
 $c_red2 : map-get($colors, _red2);
 $c_red3 : map-get($colors, _red3);
 $c_green : map-get($colors, _green);
+$c_orange : map-get($colors, _orange);
 $c_yellow : map-get($colors, _yellow);
 $c_yellow2 : map-get($colors, _yellow2);
 $c_title : map-get($colors, _title);

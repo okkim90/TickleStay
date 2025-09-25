@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TickleOn</title>
+   
+    <!--[D] 공통척용 js&css-->
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+<body>
+    <div id="wrap" class="grid_wrap">
+        <header id="header" class="header">
+            <div class="m_header">
+                <h1><a href=""><img src="../assets/images/logo.svg" alt="TickleOn"></a> </h1>
+                <button type="button" class="btn_nav"></button>
+            </div>
+            <div class="header_cont">
+                <div class="hd_company">
+                    <div class="hd_company_item dep1"> 
+                        <span class="txt">회사명회사명회사명회사명회사명회사명</span>    
+                    </div>
+                    <div class="hd_company_item select-box ty_mid ">
+                        <input type="text" class="select-input" value="" placeholder="지점을 선택해주세요" readonly>
+                        <div class="options ty_right">
+                            <ul>
+                                <li data-value="1" class="option">서울지점</li>
+                                <li data-value="2" class="option">경기지점</li>
+                                <li data-value="3" class="option">강원지점</li>
+                            </ul>
+                            <button type="button" class="f_btn ty_mid _key2 w100" onclick="event.stopPropagation();">지점 관리</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hd_user">
+                    <div class="hd_user_name">
+                        <strong class="name">이상부</strong> 님
+                    </div>
+                    <button type="button" class="btn_logout">로그아웃</button>
+                </div>
+            </div>
+        </header>
+        <aside class="nav fixed">
+            <div class="nav_top">
+                <a href="" class="nav_top_logo"></a>
+                
+            </div>
+            <nav class="nav_wrap">
+                <div class="nav_btn_box">
+                    <button type="button" class="nav_toggle" aria-label="nav_toggle"></button>
+                    <button type="button" class="nav_close" aria-label="nav_toggle"></button>
+                </div>
+                <ul class="nav_list dep1">
+                    <li class="nav_dep1"> <!--[DEV] 활성화 : 'on' class-->
+                        <a href="" class="nav_btn dep1">
+                            <i class="nav_ico ico_menu1"></i>
+                            <span class="txt">모니터링</span>
+                        </a>
+                    </li>
+                    <li class="nav_dep1 has_dep">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu2"></i>
+                            <span class="txt">공간관리</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실관리</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">시설관리</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_dep1 has_dep">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu3"></i>
+                            <span class="txt">수행작업관리</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2 on">객실작업관리</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">시설작업관리</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_dep1 has_dep">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu4"></i>
+                            <span class="txt">계정관리</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">계정관리 하위메뉴</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">계정관리 하위메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_dep1 has_dep">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu5"></i>
+                            <span class="txt">통계</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실 작업 수행 현황</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">작업자별 수행 현황</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실 소모품 사용 현황</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_dep1 has_dep">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu6"></i>
+                            <span class="txt">설정</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실 유형</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실 소모품 유형</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실 작업 유형</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </aside>
+        <main id="container" class="container">
+            <div class="sub_tit">
+                <h1 class="title1 mr_auto"><i class="tit_ico ty_menu1"></i>타이틀</h1>
+            </div>
+        </main>
+    </div>
+    <!--[D] 로딩 레이어 
+        활성화 : 'on' class
+    -->
+    <div class="loader_layer">
+        <span class="loader"></span>
+    </div>
+    <!--[D] 로딩 레이어 -->
+</body>
+</html>

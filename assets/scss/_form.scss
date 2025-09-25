@@ -5,6 +5,9 @@
     background-position: right 6px center;
     background-size: 18px 18px;
     text-overflow: ellipsis;
+    &._key {
+        border-color: $c_key;
+    }
     &.ty_small {
         height: 33px;
         //line-height: 31px;
@@ -90,6 +93,12 @@
         &:focus {
             background-color: $c_key2;
         } 
+    }
+    &._key2 {
+        border-color: $c_key;
+        // &:focus {
+        //     background-color: color.scale(#ff0, $lightness: 89%);
+        // } 
     }
 
     &[type='date'] {

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TickleOn</title>
+   
+    <!--[D] 공통척용 js&css-->
+    <link rel="stylesheet" href="../assets/css/common.min.css">
+    <script type="text/javascript" src="../assets/js/common.js"></script>
+</head>
+<body>
+    <div id="wrap" class="grid_wrap">
+        <header id="header" class="header">
+            <div class="m_header">
+                <h1><a href=""><img src="../assets/images/logo.svg" alt="TickleOn"></a> </h1>
+                <button type="button" class="btn_nav"></button>
+            </div>
+            <div class="header_cont">
+                <div class="hd_company">
+                    <div class="hd_company_item dep1"> 
+                        <span class="txt">회사명회사명회사명회사명회사명회사명</span>    
+                    </div>
+                    <div class="hd_company_item select-box ty_mid ">
+                        <input type="text" class="select-input" value="" placeholder="지점을 선택해주세요" readonly>
+                        <div class="options ty_right">
+                            <ul>
+                                <li data-value="1" class="option">서울지점</li>
+                                <li data-value="2" class="option">경기지점</li>
+                                <li data-value="3" class="option">강원지점</li>
+                            </ul>
+                            <button type="button" class="f_btn ty_mid _key2 w100" onclick="event.stopPropagation();">지점 관리</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hd_user">
+                    <div class="hd_user_name">
+                        <strong class="name">이상부</strong> 님
+                    </div>
+                    <button type="button" class="btn_logout">로그아웃</button>
+                </div>
+            </div>
+        </header>
+        <aside class="nav fixed">
+            <div class="nav_top">
+                <a href="" class="nav_top_logo"></a>
+                
+            </div>
+            <nav class="nav_wrap">
+                <div class="nav_btn_box">
+                    <button type="button" class="nav_toggle" aria-label="nav_toggle"></button>
+                    <button type="button" class="nav_close" aria-label="nav_toggle"></button>
+                </div>
+                <ul class="nav_list dep1">
+                    <li class="nav_dep1"> <!--[DEV] 활성화 : 'on' class-->
+                        <a href="" class="nav_btn dep1">
+                            <i class="nav_ico ico_menu1"></i>
+                            <span class="txt">모니터링</span>
+                        </a>
+                    </li>
+                    <li class="nav_dep1 has_dep">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu2"></i>
+                            <span class="txt">공간관리</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실관리</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">시설관리</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_dep1 has_dep">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu3"></i>
+                            <span class="txt">수행작업관리</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2 on">객실작업관리</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">시설작업관리</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_dep1 has_dep">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu4"></i>
+                            <span class="txt">계정관리</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">계정관리 하위메뉴</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">계정관리 하위메뉴</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_dep1 has_dep">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu5"></i>
+                            <span class="txt">통계</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실 작업 수행 현황</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">작업자별 수행 현황</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실 소모품 사용 현황</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav_dep1 has_dep on">
+                        <a href="" class="nav_btn dep1 ">
+                            <i class="nav_ico ico_menu6"></i>
+                            <span class="txt">설정</span>
+                        </a>
+                        <ul class="nav_list dep2">
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2 on">객실 유형</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실 소모품 유형</a>
+                            </li>
+                            <li class="nav_dep2">
+                                <a href="" class="nav_btn dep2">객실 작업 유형</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </aside>
+        <main id="container" class="container">
+            <div class="sub_tit">
+                <h1 class="title1 mr_auto"><i class="tit_ico ty_menu6"></i>객실 유형</h1>
+            </div>
+
+            <div class="sec">
+                <h3 class="title3 _gap4 mb10">
+                    <i class="tit_ico ty_arrow"></i>객실 유형 목록</span>
+                </h3>
+                <div class="cont ty2">
+                    <div class="tbl_wrap" style="max-height: 500px;" >
+                        <table class="tbl tl_fixed" style="min-width:800px">
+                            <colgroup>
+                                <col style="width: 60px;">
+                                <col>
+                                <col>
+                                <col>
+                                <col style="width: 128px;">
+                            </colgroup>
+                            <caption></caption>
+                            <thead class="fixed_top">
+                                <tr>
+                                    <th>번호</th>
+                                    <th>객실 유형명<button class="btn_sorting"></button></th> <!--[D] 역순 : 'on' class-->
+                                    <th>객실별 가중치</th>
+                                    <th>메모</th>  
+                                    <th>관리</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td class="pd4">
+                                        <input type="text" class="f_input ty_mid w100 _key2">
+                                    </td>
+                                    <td class="pd4">
+                                        <input type="text" class="f_input ty_mid w100 _key2">
+                                    </td>
+                                    <td class="pd4">
+                                        <input type="text" class="f_input ty_mid w100 _key2">
+                                    </td>
+                                    <td class="pd4"> 
+                                        <button type="button" class="f_btn ty_mid _blue _ico _add w100">등록</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Suite</td>
+                                    <td>4</td>
+                                    <td>룸4, 킹베드2, 퀸베드2, 욕실</td>
+                                    <td class="pd4">
+                                        <div class="d_flex jc_c _gap4">
+                                            <button class="f_btn ty_mid _line ">수정</button>
+                                            <button class="f_btn ty_mid _line ">삭제</button>
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Suite</td>
+                                    <td>4</td>
+                                    <td>룸4, 킹베드2, 퀸베드2, 욕실</td>
+                                    <td class="pd4">
+                                        <div class="d_flex jc_c _gap4">
+                                            <button class="f_btn ty_mid _line ">수정</button>
+                                            <button class="f_btn ty_mid _line disabled" disabled>삭제</button>
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Suite</td>
+                                    <td>4</td>
+                                    <td>룸4, 킹베드2, 퀸베드2, 욕실</td>
+                                    <td class="pd4">
+                                        <div class="d_flex jc_c _gap4">
+                                            <button class="f_btn ty_mid _line ">수정</button>
+                                            <button class="f_btn ty_mid _line ">삭제</button>
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Suite</td>
+                                    <td>4</td>
+                                    <td>룸4, 킹베드2, 퀸베드2, 욕실</td>
+                                    <td class="pd4">
+                                        <div class="d_flex jc_c _gap4">
+                                            <button class="f_btn ty_mid _line ">수정</button>
+                                            <button class="f_btn ty_mid _line ">삭제</button>
+                                        </div> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Suite</td>
+                                    <td>4</td>
+                                    <td>룸4, 킹베드2, 퀸베드2, 욕실</td>
+                                    <td class="pd4">
+                                        <div class="d_flex jc_c _gap4">
+                                            <button class="f_btn ty_mid _line ">수정</button>
+                                            <button class="f_btn ty_mid _line ">삭제</button>
+                                        </div> 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>   
+                    <div class="info_box d_flex mt15">
+                        <i class="ico_info"></i> 
+                        <p class="fc_key">한 곳 이상에 등록(연결)된 유형은 삭제할 수 없습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <!--[D] 로딩 레이어 
+        활성화 : 'on' class
+    -->
+    <div class="loader_layer">
+        <span class="loader"></span>
+    </div>
+    <!--[D] 로딩 레이어 -->
+</body>
+</html>
