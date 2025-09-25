@@ -8674,7 +8674,7 @@ input::-webkit-search-results-decoration {
 
 .login_wrap {
   position: relative;
-  min-height: 100dvh;
+  min-height: 80dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8699,10 +8699,10 @@ input::-webkit-search-results-decoration {
 }
 .login_logo {
   text-align: center;
-  margin-bottom: 44px;
+  margin-bottom: 50px;
 }
 .login_logo img {
-  width: 400px;
+  width: 280px;
 }
 @media (max-width: 768px) {
   .login_logo {
