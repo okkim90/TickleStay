@@ -41,7 +41,7 @@
         }
     </script>
     <!--//[D] datepicker js&css-->
-
+   
     <!--[D] 공통척용 js&css-->
     <link rel="stylesheet" href="../assets/css/common.min.css">
     <script type="text/javascript" src="../assets/js/common.js"></script>
@@ -110,7 +110,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav_dep1 has_dep on">
+                    <li class="nav_dep1 has_dep">
                         <a href="" class="nav_btn dep1 ">
                             <i class="nav_ico ico_menu3"></i>
                             <span class="txt">수행작업관리</span>
@@ -138,37 +138,37 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav_dep1 has_dep">
+                    <li class="nav_dep1 has_dep on">
                         <a href="" class="nav_btn dep1 ">
                             <i class="nav_ico ico_menu5"></i>
                             <span class="txt">통계</span>
                         </a>
                         <ul class="nav_list dep2">
                             <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">객실 작업 수행 현황</a>
+                                <a href="" class="nav_btn dep2 ">객실 작업 수행 현황</a>
                             </li>
                             <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">작업자별 수행 현황</a>
+                                <a href="" class="nav_btn dep2 ">작업자별 수행 현황</a>
                             </li>
                             <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">객실 소모품 사용 현황</a>
+                                <a href="" class="nav_btn dep2 on">객실 소모품 사용 현황</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav_dep1 has_dep">
+                    <li class="nav_dep1 has_dep ">
                         <a href="" class="nav_btn dep1 ">
                             <i class="nav_ico ico_menu6"></i>
                             <span class="txt">설정</span>
                         </a>
                         <ul class="nav_list dep2">
                             <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">객실 유형</a>
+                                <a href="" class="nav_btn dep2 ">객실 유형</a>
                             </li>
                             <li class="nav_dep2">
                                 <a href="" class="nav_btn dep2">객실 소모품 유형</a>
                             </li>
                             <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">객실 작업 유형</a>
+                                <a href="" class="nav_btn dep2 ">객실 작업 유형</a>
                             </li>
                         </ul>
                     </li>
@@ -178,163 +178,194 @@
         </aside>
         <main id="container" class="container">
             <div class="sub_tit">
-                <h1 class="title1 mr_auto"><i class="tit_ico ty_menu3"></i>객실 작업 관리</h1>
-                <div class="btn_set ">
-                    <button class="f_btn ty_mid _og _ico _add">객실 작업 등록</button>
-                </div>
+                <h1 class="title1 mr_auto"><i class="tit_ico ty_menu5"></i>작업자별 수행 현황</h1>
             </div>
-            <div class="sorting_sec">
-                <div class="cont d_flex _gap10 fw_w">
-                    <div class="select-box ty_mid2">
-                        <input type="text" class="select-input" placeholder="객실 유형 선택" readonly>
-                        <div class="options">
-                            <ul>
-                                <li data-value="1" class="option">객실 유형1</li>
-                                <li data-value="2" class="option">객실 유형2</li>
-                                <li data-value="3" class="option">객실 유형3</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="select-box ty_mid2">
-                        <input type="text" class="select-input" placeholder="객실 작업 선택" readonly>
-                        <div class="options">
-                            <ul>
-                                <li data-value="1" class="option">객실 작업1</li>
-                                <li data-value="2" class="option">객실 작업2</li>
-                                <li data-value="3" class="option">객실 작업3</li>
-                            </ul>
-                        </div>
+            <div class="top_set">
+                <div class="date_box d_flex fw_w _gap8 ai_c">
+                    <label>기간</label>
+                    <button type="button" class="f_btn ty_mid _lightGrey">전월</button>
+                    <div class="date_set d_flex fw_w  ai_c">
+                        <input type="text" class="f_input ty_mid datepicker w_150" value="2024-09-24(화)" readonly>
+                        ~
+                        <input type="text" class="f_input ty_mid datepicker w_150" value="2024-09-24(화)" readonly>
                     </div>
                 </div>
+                <div class="d_flex ai_c fw_w _gapX32 _gapY10 mw_max">
+                    <div class="d_flex _gapX8 ai_c mw_max">
+                        <label class="shrink0">품목 선택</label>
+                        <div class="select-box ty_mid2 w_180 mw_max">
+                            <input type="text" class="select-input" value="전체" readonly>
+                            <div class="options">
+                                <ul>
+                                    <li data-value="1" class="option">전체</li>
+                                    <li data-value="2" class="option">품목1</li>
+                                    <li data-value="3" class="option">품목2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="f_btn ty_mid _line _ico _search mw_max">검색</button>
+                </div>
             </div>
+
             <div class="sec">
-                <div class="tbl_top d_flex ai_b">
-                    <span class="fc_font2">총 <b class="fc_key">10</b>건(<b class="fc_key">1</b>/2)페이지</span>
-                    <div class="hd_company_item select-box ty_small w_120 ml_auto">
-                        <input type="text" class="select-input" value="10개씩 보기" readonly="">
-                        <div class="options">
-                            <ul>
-                                <li data-value="1" class="option">10개씩 보기</li>
-                                <li data-value="2" class="option">20개씩 보기</li>
-                                <li data-value="3" class="option">30개씩 보기</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+              
                 <div class="cont ty2">
-                    <div class="tbl_wrap" style="max-height: 460px;">
+                    <div class="tbl_top d_flex ai_b">
+                        <span class="fc_font2 mr_auto">총 <b class="fc_key">10</b>건</span>
+                        <button type="button" class="f_btn _ico ty_small _excel">객실 소모품 사용현황 다운로드</button>
+                    </div>
+                    <div class="tbl_wrap" style="max-height: 540px;">
                         <table class="tbl tl_fixed" style="min-width:600px">
                             <colgroup>
-                                <col style="width: 60px;">
+                                <col style="width: 100px;">
                                 <col>
                                 <col>
-                                <col style="width: 140px;">
-                                <col style="width: 150px;">
+                                <col>
+                                <col>
+                                <col>
                             </colgroup>
                             <caption></caption>
-                            <thead class="fixed_top">
+                            <thead>
                                 <tr>
-                                    <th>번호</th>
-                                    <th class="taL">객실 유형<button class="btn_sorting"></button></th>
-                                    <th class="taL">객실 작업 유형<button class="btn_sorting on"></button></th> <!--[D] 역순 : 'on' class-->
-                                    <th>연동 객실 수</th>
-                                    <th>관리</th>
-                                </tr>
+                                    <th class="fixed_top fixed_left">날짜</th>
+                                    <th class="fixed_top">타월</th>
+                                    <th class="fixed_top">어매니티</th>
+                                    <th class="fixed_top">음료A</th>
+                                    <th class="fixed_top">음료B</th>
+                                    <th class="fixed_top">생수</th>
+                                </tr>    
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td class="taL">Suite</td>
-                                    <td class="taL">일반A</td>
-                                    <td class="pd4"><button type="button" class="f_btn ty_mid _grey w_120">999</button></td>
-                                    <td class="pd4">
-                                        <div class="d_flex jc_c _gap4">
-                                            <button class="f_btn ty_mid _line ">수정</button>
-                                            <button class="f_btn ty_mid _line ">삭제</button>
-                                        </div> 
-                                    </td>
+                                    <th class="fixed_left">9/1</th>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>    
+                                </tr>
+                               <tr>
+                                    <th class="fixed_left">9/1</th>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>    
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td class="taL">Suite</td>
-                                    <td class="taL">일반A</td>
-                                    <td class="pd4"><button type="button" class="f_btn ty_mid _grey w_120">999</button></td>
-                                    <td class="pd4">
-                                        <div class="d_flex jc_c _gap4">
-                                            <button class="f_btn ty_mid _line ">수정</button>
-                                            <button class="f_btn ty_mid _line ">삭제</button>
-                                        </div> 
-                                    </td>
+                                    <th class="fixed_left">9/1</th>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>    
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td class="taL">Suite</td>
-                                    <td class="taL">일반A</td>
-                                    <td class="pd4"><button type="button" class="f_btn ty_mid _grey w_120">999</button></td>
-                                    <td class="pd4">
-                                        <div class="d_flex jc_c _gap4">
-                                            <button class="f_btn ty_mid _line ">수정</button>
-                                            <button class="f_btn ty_mid _line ">삭제</button>
-                                        </div> 
-                                    </td>
+                                    <th class="fixed_left">9/1</th>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>    
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td class="taL">Suite</td>
-                                    <td class="taL">일반A</td>
-                                    <td class="pd4"><button type="button" class="f_btn ty_mid _grey w_120">999</button></td>
-                                    <td class="pd4">
-                                        <div class="d_flex jc_c _gap4">
-                                            <button class="f_btn ty_mid _line ">수정</button>
-                                            <button class="f_btn ty_mid _line ">삭제</button>
-                                        </div> 
-                                    </td>
+                                    <th class="fixed_left">9/1</th>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>    
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td class="taL">Suite</td>
-                                    <td class="taL">일반A</td>
-                                    <td class="pd4"><button type="button" class="f_btn ty_mid _grey w_120">999</button></td>
-                                    <td class="pd4">
-                                        <div class="d_flex jc_c _gap4">
-                                            <button class="f_btn ty_mid _line ">수정</button>
-                                            <button class="f_btn ty_mid _line ">삭제</button>
-                                        </div> 
-                                    </td>
+                                    <th class="fixed_left">9/1</th>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>    
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td class="taL">Suite</td>
-                                    <td class="taL">일반A</td>
-                                    <td class="pd4"><button type="button" class="f_btn ty_mid _grey w_120">999</button></td>
-                                    <td class="pd4">
-                                        <div class="d_flex jc_c _gap4">
-                                            <button class="f_btn ty_mid _line ">수정</button>
-                                            <button class="f_btn ty_mid _line ">삭제</button>
-                                        </div> 
-                                    </td>
+                                    <th class="fixed_left">9/1</th>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>    
+                                </tr>
+                                <tr>
+                                    <th class="fixed_left">9/1</th>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>    
+                                </tr>
+                                <tr>
+                                    <th class="fixed_left">9/1</th>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>    
+                                </tr>
+                                <tr>
+                                    <th class="fixed_left">9/1</th>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>    
+                                </tr>
+                                <tr>
+                                    <th class="fixed_left">9/1</th>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>    
+                                </tr>
+                                <tr>
+                                    <th class="fixed_left">9/1</th>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>    
+                                </tr>
+                                <tr>
+                                    <th class="fixed_left">9/1</th>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>    
+                                </tr>
+                                <tr>
+                                    <th class="fixed_left">9/1</th>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>
+                                    <td>99</td>    
                                 </tr>
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th class="fixed_bot fixed_left">총합</th>
+                                    <th class="fixed_bot">999</th>
+                                    <th class="fixed_bot">999</th>
+                                    <th class="fixed_bot">999</th>
+                                    <th class="fixed_bot">999</th>
+                                    <th class="fixed_bot">999</th>
+                                </tr>
+                            </tfoot>
                         </table>
-                    </div>
-                    <div class="paging_wrap">
-                        <button type="button" class="paging_btn ty_first paging_nav"></button>
-                        <button type="button" class="paging_btn ty_prev paging_nav"></button>
-                        <div class="paging_list">
-                            <button type="button" class="paging_btn current">1</button>
-                            <button type="button" class="paging_btn">2</button>
-                            <button type="button" class="paging_btn">3</button>
-                            <button type="button" class="paging_btn">4</button>
-                            <button type="button" class="paging_btn">5</button>                          
-                        </div>
-                        <button type="button" class="paging_btn ty_next paging_nav"></button>
-                        <button type="button" class="paging_btn ty_last paging_nav"></button>
                     </div>
                 </div>
             </div>
+
         </main>
-
-
     </div>
     <!--[D] 로딩 레이어 
         활성화 : 'on' class

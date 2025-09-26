@@ -13,6 +13,14 @@
         display: block;
     }
 
+    &:has(.nav) {
+        .header_cont {
+            .logo_box {
+                display: none;
+            }
+        }
+    }
+
     .header {
         grid-area: header;
         position: sticky;
@@ -27,7 +35,7 @@
         &_cont {
             display: flex;
             align-items: center;
-            padding: 0 20px;
+            padding-right: 20px;
             height: 70px;
             gap: 10px;
             @include tablet {  
@@ -35,6 +43,16 @@
                 padding: 15px 20px;
                 //row-gap: 15px;
                 flex-wrap: wrap;
+            }
+            .logo_box {
+                width: 250px;
+                height: 70px;
+                background: url(../images/logo.svg) center center no-repeat;
+                background-size: auto 40px;
+                background-position: 20px center ;
+                @include tablet  {
+                    display: none;
+                }
             }
         }
         .m_header {
@@ -505,7 +523,7 @@
         top: 70px;
         z-index: 999;
         padding: 15px 20px;
-        background-color: $c_key6;
+        background-color: $c_bg;
         @include mobile {
             top: 70px;
         }
@@ -799,7 +817,7 @@
     gap: 16px 32px;
     margin-bottom: 20px;
     @include mobile {
-        margin: 0 20px;
+        //margin: 0 20px;
         margin-bottom: 20px;
     }
 }
@@ -2047,9 +2065,9 @@
     }
 
     .btn_cancel {
-        visibility: hidden;
-        opacity: 0;
-        transition: all .1s ease-in-out;
+        //visibility: hidden;
+        //opacity: 0;
+        //transition: all .1s ease-in-out;
         width: 35px;
         height: 35px;
         border-radius: 50%;

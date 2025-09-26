@@ -6,6 +6,7 @@
     }
     &_top {
         margin-bottom: 10px;
+        font-size: $fz_2;
     }
     &_wrap {
         position: relative;
@@ -47,7 +48,14 @@
             border-color: $c_key;
             color: $c_key;
         }
+        &[rowspan] {
+            background-color: #fff !important;
+            
+        }
+       
     }
+    
+
     thead {
 
         // &::after {
@@ -91,6 +99,7 @@
                     border-color: $c_key;
                     color: $c_key;
                 }
+                
             }
         }
     }
@@ -123,9 +132,25 @@
         left: 0;
         top: 0;
         z-index: 11;
-        .fixed_left {
-            z-index: 11;
+        background-color: $c_key2;
+        &.fixed_left {
+            z-index: 12;
             //left: 0;
+            background-color: $c_key2;
+        }
+
+    }
+
+    .fixed_bot {
+        position: sticky;
+        
+        bottom: 0;
+        z-index: 11;
+        background-color: $c_key2 ;
+        &.fixed_left {
+            z-index: 12;
+            //left: 0;
+            background-color: $c_key2;
         }
 
     }

@@ -6171,6 +6171,9 @@ input::-webkit-search-results-decoration {
     display: block;
   }
 }
+.grid_wrap:has(.nav) .header_cont .logo_box {
+  display: none;
+}
 .grid_wrap .header {
   grid-area: header;
   position: sticky;
@@ -6188,7 +6191,7 @@ input::-webkit-search-results-decoration {
 .grid_wrap .header_cont {
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding-right: 20px;
   height: 70px;
   gap: 10px;
 }
@@ -6197,6 +6200,18 @@ input::-webkit-search-results-decoration {
     height: auto;
     padding: 15px 20px;
     flex-wrap: wrap;
+  }
+}
+.grid_wrap .header_cont .logo_box {
+  width: 250px;
+  height: 70px;
+  background: url(../images/logo.svg) center center no-repeat;
+  background-size: auto 40px;
+  background-position: 20px center;
+}
+@media (max-width: 1024px) {
+  .grid_wrap .header_cont .logo_box {
+    display: none;
   }
 }
 .grid_wrap .header .m_header {
@@ -6664,7 +6679,7 @@ input::-webkit-search-results-decoration {
   top: 70px;
   z-index: 999;
   padding: 15px 20px;
-  background-color: #ebe5df;
+  background-color: #F2F2F2;
 }
 @media (max-width: 768px) {
   .grid_wrap .sticky_top {
@@ -6954,7 +6969,6 @@ input::-webkit-search-results-decoration {
 }
 @media (max-width: 768px) {
   .top_set {
-    margin: 0 20px;
     margin-bottom: 20px;
   }
 }
@@ -8219,9 +8233,6 @@ input::-webkit-search-results-decoration {
   opacity: 1;
 }
 .monitoring_box .btn_cancel {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.1s ease-in-out;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -10709,6 +10720,7 @@ input::-webkit-search-results-decoration {
 }
 .tbl_top {
   margin-bottom: 10px;
+  font-size: 13px;
 }
 .tbl_wrap {
   position: relative;
@@ -10750,6 +10762,9 @@ input::-webkit-search-results-decoration {
   background-color: #f0e1da;
   border-color: #635954;
   color: #635954;
+}
+.tbl th[rowspan], .tbl td[rowspan] {
+  background-color: #fff !important;
 }
 .tbl thead th {
   background-color: #f0e1da;
@@ -10800,9 +10815,21 @@ input::-webkit-search-results-decoration {
   left: 0;
   top: 0;
   z-index: 11;
+  background-color: #f0e1da;
 }
-.tbl .fixed_top .fixed_left {
+.tbl .fixed_top.fixed_left {
+  z-index: 12;
+  background-color: #f0e1da;
+}
+.tbl .fixed_bot {
+  position: sticky;
+  bottom: 0;
   z-index: 11;
+  background-color: #f0e1da;
+}
+.tbl .fixed_bot.fixed_left {
+  z-index: 12;
+  background-color: #f0e1da;
 }
 .tbl .fixed_left {
   position: sticky;

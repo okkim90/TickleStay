@@ -4,43 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TickleOn</title>
-    <!--[D] datepicker js&css-->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
-    <script>
-        $(function(){
-            // datepicker
-            $.datepicker.regional['ko'] = {
-                closeText: '닫기',
-                prevText: '이전달',
-                nextText: '다음달',
-                currentText: '오늘',
-                monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-                monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-                dayNames: ['일','월','화','수','목','금','토'],
-                dayNamesShort: ['일','월','화','수','목','금','토'],
-                dayNamesMin: ['일','월','화','수','목','금','토'],
-                weekHeader: 'Wk',
-                dateFormat: 'yy-mm-dd(D)',
-                firstDay: 0,
-                isRTL: false,
-                showMonthAfterYear: true,
-                changeMonth: true,
-                changeYear: true
-            };
-            $.datepicker.setDefaults($.datepicker.regional['ko']);
-            $(".datepicker").datepicker();
-        });
-        //오늘 선택
-        function set_today(target){
-            let date_set = $(target).parents('.date_set');
-            let datepicker = date_set.find('.datepicker'); 
-            datepicker.datepicker('setDate', 'today');
-        }
-    </script>
-    <!--//[D] datepicker js&css-->
+    <title>Tickle Stay</title>
+    
 
     <!--[D] 공통척용 js&css-->
     <link rel="stylesheet" href="../assets/css/common.min.css">
@@ -54,6 +19,7 @@
                 <button type="button" class="btn_nav"></button>
             </div>
             <div class="header_cont">
+                <h1 class="logo_box"><span class="vHidden">TICKLE STAY</span></h1>
                 <div class="hd_company">
                     <div class="hd_company_item dep1"> 
                         <span class="txt">회사명회사명회사명회사명회사명회사명</span>    
@@ -77,104 +43,7 @@
                     <button type="button" class="btn_logout">로그아웃</button>
                 </div>
             </div>
-        </header>
-        <aside class="nav fixed">
-            <div class="nav_top">
-                <a href="" class="nav_top_logo"></a>
-                
-            </div>
-            <nav class="nav_wrap">
-                <div class="nav_btn_box">
-                    <button type="button" class="nav_toggle" aria-label="nav_toggle"></button>
-                    <button type="button" class="nav_close" aria-label="nav_toggle"></button>
-                </div>
-                <ul class="nav_list dep1">
-                    <li class="nav_dep1">
-                        <a href="" class="nav_btn dep1">
-                            <i class="nav_ico ico_menu1"></i>
-                            <span class="txt">모니터링</span>
-                        </a>
-                    </li>
-                    <li class="nav_dep1 has_dep">
-                        <a href="" class="nav_btn dep1 ">
-                            <i class="nav_ico ico_menu2"></i>
-                            <span class="txt">공간관리</span>
-                        </a>
-                        <ul class="nav_list dep2">
-                            <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">객실관리</a>
-                            </li>
-                            <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">시설관리</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav_dep1 has_dep">
-                        <a href="" class="nav_btn dep1 ">
-                            <i class="nav_ico ico_menu3"></i>
-                            <span class="txt">수행작업관리</span>
-                        </a>
-                        <ul class="nav_list dep2">
-                            <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2 on">객실작업관리</a>
-                            </li>
-                            <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">시설작업관리</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav_dep1 has_dep">
-                        <a href="" class="nav_btn dep1 ">
-                            <i class="nav_ico ico_menu4"></i>
-                            <span class="txt">계정관리</span>
-                        </a>
-                        <ul class="nav_list dep2">
-                            <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">계정관리 하위메뉴</a>
-                            </li>
-                            <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">계정관리 하위메뉴</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav_dep1 has_dep">
-                        <a href="" class="nav_btn dep1 ">
-                            <i class="nav_ico ico_menu5"></i>
-                            <span class="txt">통계</span>
-                        </a>
-                        <ul class="nav_list dep2">
-                            <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">객실 작업 수행 현황</a>
-                            </li>
-                            <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">작업자별 수행 현황</a>
-                            </li>
-                            <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">객실 소모품 사용 현황</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav_dep1 has_dep">
-                        <a href="" class="nav_btn dep1 ">
-                            <i class="nav_ico ico_menu6"></i>
-                            <span class="txt">설정</span>
-                        </a>
-                        <ul class="nav_list dep2">
-                            <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">객실 유형</a>
-                            </li>
-                            <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">객실 소모품 유형</a>
-                            </li>
-                            <li class="nav_dep2">
-                                <a href="" class="nav_btn dep2">객실 작업 유형</a>
-                            </li>
-                        </ul>
-                    </li>
-                    
-                </ul>
-            </nav>
-        </aside>
+        </header>    
         <main id="container" class="container">
             <div class="sub_tit">
                 <h1 class="title1">지점 관리</h1>

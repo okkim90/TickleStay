@@ -94,10 +94,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     const nav = document.querySelector('.nav');
-    const nav_toggle = nav.querySelector('.nav_toggle');
+    const nav_toggle = nav?.querySelector('.nav_toggle');
     const nav_item = document.querySelectorAll('.nav_dep1.has_dep');
     const btn_nav = document.querySelector('.btn_nav');
     const nav_close = document.querySelector('.nav_close');
+
+
     nav_item.forEach(e=>{
       let nav_btn = e.querySelector('.nav_btn.dep1');
       nav_btn.addEventListener('click',(event)=>{
@@ -117,28 +119,28 @@ document.addEventListener('DOMContentLoaded', function() {
     //     nav.classList.add('fixed')
     //   } 
     // });
-    nav_toggle.addEventListener('click',()=>{
+    nav_toggle?.addEventListener('click',()=>{
       if(nav.classList.contains('fixed')){
         nav.classList.remove('fixed');
       }else{
         nav.classList.add('fixed');
       } 
     });
-    btn_nav.addEventListener('click',()=>{
+    btn_nav?.addEventListener('click',()=>{
       nav.classList.add('on');
     });
     
-    nav.addEventListener('mouseenter',(event)=>{
+    nav?.addEventListener('mouseenter',(event)=>{
       if(!nav.classList.contains('fixed')){
         event.target.classList.remove('closed')
       }
     });
-    nav.addEventListener('mouseleave',(event)=>{
+    nav?.addEventListener('mouseleave',(event)=>{
       if(!nav.classList.contains('fixed')){
         event.target.classList.add('closed')
       } 
     });
-    nav_close.addEventListener('click',()=>{
+    nav_close?.addEventListener('click',()=>{
       nav.classList.remove('fixed');
       nav.classList.remove('on');
       
