@@ -2265,3 +2265,89 @@
     gap: 10px 32px;
     width: 100%;
 }
+
+
+
+.detail_sec {
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, .08);
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    
+    border: 1px solid $c_line2;
+    
+    .sticker {
+        position: absolute;
+        font-size: 12px;
+        padding: 0 8px;
+        border-radius: 8px 0 8px 0;
+        left: 0;
+        top: 0;
+        &._black {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+    &_tit {
+        font-size: 16px;
+        border-bottom: 1px solid $c_line;
+        padding: 16px 16px 8px;
+        font-weight: 600;
+    }
+    &_cont {
+        padding: 16px;
+    }
+    &_info {
+        padding: 16px;
+        border-radius: 0 0 8px 8px;
+    }
+    
+}
+
+
+.modal_contents .sec {
+    margin-top: 16px;
+    
+    .chk_list {
+        &_item {
+            & + .chk_list_item {
+                margin-top: 8px;
+            }
+            .f_chk, .f_radio {
+                    display: flex;
+                    border: 1px solid $c_line;
+                    border-radius: 8px;
+                    padding: 10px 16px;
+            }
+        }
+    }
+    .chk_set {
+        padding: 16px;
+        border-radius: 8px;
+        background-color: #fff;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        flex-wrap: wrap;
+        border: 1px solid $c_line2;
+        //@include dropShadow;
+        box-shadow: 2px 4px 6px rgba(0, 0, 0, .08);
+
+        &_txt {
+            font-size: 16px;
+            @include mobile {
+                font-size: 14px;
+            }
+            color: $c_key;
+            font-weight: 600;
+        
+        }
+        .btn_set {
+            margin-left: auto;
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+    }
+}

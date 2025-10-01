@@ -26,6 +26,7 @@ $colors: (
     _bg: #F2F2F2,
     _bg2: #f5f5f5,
     _bg3 : #fcfcfc,
+    _bg4 : #EBEBEB,
     _title: #333D4B,
     _font: #000,
     _font2: #635954,
@@ -69,6 +70,7 @@ $c_line2 : map-get($colors, _line2);
 $c_bg : map-get($colors, _bg);
 $c_bg2 : map-get($colors, _bg2);
 $c_bg3 : map-get($colors, _bg3);
+$c_bg4 : map-get($colors, _bg4);
 $c_grey : map-get($colors, _grey);
 $c_grey2 : map-get($colors, _grey2);
 $c_lightGrey : map-get($colors, _lightGrey);

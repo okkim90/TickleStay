@@ -581,42 +581,181 @@
                                 <td>2025.07.17(목) 15:39</td>
                             </tr>
                         </table> 
-                        <div class="pa10 bg_bg bd_radius8 mt20">
-                            <div class="chk_sec bg_white bd_radius8 bd_line2">
-                                <div class="chk_sec_tit">실행항목에 체크</div>
-                                <ul class="chk_list2">
-                                    <li>
+                        
+                        <div class="sec detail_sec ">
+                            <div class="detail_sec_tit">체크항목 타이틀 입니다.</div>
+                            <div class="detail_sec_cont">
+                                <ul class="chk_list">
+                                    <li class="chk_list_item">
                                         <label class="f_chk">
                                             <input type="checkbox" checked disabled>
                                             <div class="f_chk_ico"></div>
-                                            <div class="f_chk_txt">냉장고</div>
+                                            <div class="f_chk_txt">특정 층수 없음</div>
                                         </label>
                                     </li>
-                                    <li>
+                                    <li class="chk_list_item">
                                         <label class="f_chk">
                                             <input type="checkbox" checked disabled>
                                             <div class="f_chk_ico"></div>
-                                            <div class="f_chk_txt">음식물</div>
+                                            <div class="f_chk_txt">특정 층수 없음</div>
                                         </label>
                                     </li>
-                                    <li>
+                                    <li class="chk_list_item">
                                         <label class="f_chk">
-                                            <input type="checkbox" checked disabled>
+                                            <input type="checkbox" disabled>
                                             <div class="f_chk_ico"></div>
-                                            <div class="f_chk_txt">음식물</div>
+                                            <div class="f_chk_txt">특정 층수 없음</div>
                                         </label>
                                     </li>
-                                </ul>   
-
+                                </ul>
                             </div>
-                            <div class="mt15">
-                                <div class="img_box bd_line2 bd_radius8 ov_h">
-                                    <img src="../assets/images/ai_sample.png" alt="">
+                        </div>
+                        <div class="sec detail_sec ">
+                            <div class="detail_sec_tit">라디오 항목 타이틀 입니다.</div>
+                            <div class="detail_sec_cont">
+                                <ul class="chk_list">
+                                    <li class="chk_list_item">
+                                        <label class="f_radio ">
+                                            <input type="radio" name="xxx" checked disabled>
+                                            <div class="f_radio_ico"></div>
+                                            <div class="f_radio_txt">특정 층수 없음</div>
+                                        </label>
+                                    </li>
+                                    <li class="chk_list_item">
+                                        <label class="f_radio ">
+                                            <input type="radio" name="xxx" disabled>
+                                            <div class="f_radio_ico"></div>
+                                            <div class="f_radio_txt">특정 층수 없음</div>
+                                        </label>
+                                    </li>
+                                    <li class="chk_list_item">
+                                        <label class="f_radio ">
+                                            <input type="radio" name="xxx" disabled>
+                                            <div class="f_radio_ico"></div>
+                                            <div class="f_radio_txt">특정 층수 없음</div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sec detail_sec ">
+                            <div class="detail_sec_tit">(텍스트) 거주지를 입력해 주세요.</div>
+                            <div class="detail_sec_cont">
+                                <div class="ta_wrap">
+                                    <textarea name="" id="" class="f_ta" placeholder="간단히 메모해보세요" disabled>메모내용</textarea>
+                                    <span class="count">0/200</span>
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="sec detail_sec ">
+                            <div class="detail_sec_tit">(숫자) 현재 지역의 온도는?</div>
+                            <div class="detail_sec_cont">
+                                <input type="number" value="24" class="f_input ty_mid w100" disabled >
+                            </div>
+                        </div>
+                        <div class="sec d_flex ty_col _gapY8">
+                            <div class="chk_set _blue"> 
+                                <div class="chk_set_txt">손소독제 확인했나요?</div>
+                                <div class="btn_set ">
+                                    <label class="chk_btn">
+                                        <input type="radio" name="x1" class="inp_hidden" onclick="chk_btn(this)" checked disabled>
+                                        <span class="f_btn ty_mid">아니요</span>
+                                    </label>
+                                    <label class="chk_btn">
+                                        <input type="radio" name="x1" class="inp_hidden" onclick="chk_btn(this)" disabled>
+                                        <span class="f_btn ty_mid">예</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="chk_set _blue"> 
+                                <div class="chk_set_txt">손소독제 확인했나요?</div>
+                                <div class="btn_set">
+                                    <label class="chk_btn ">
+                                        <input type="radio" name="x2" class="inp_hidden " onclick="chk_btn(this)" disabled>
+                                        <span class="f_btn ty_mid">아니요</span>
+                                    </label>
+                                    <label class="chk_btn">
+                                        <input type="radio" name="x2" class="inp_hidden" onclick="chk_btn(this)" checked disabled>
+                                        <span class="f_btn ty_mid">예</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="chk_set _blue"> 
+                                <div class="chk_set_txt">손소독제 확인했나요?</div>
+                                <div class="btn_set">
+                                    <label class="chk_btn">
+                                        <input type="radio" name="x3" class="inp_hidden" onclick="chk_btn(this)" checked disabled>
+                                        <span class="f_btn ty_mid">아니요</span>
+                                    </label>
+                                    <label class="chk_btn">
+                                        <input type="radio" name="x3" class="inp_hidden" onclick="chk_btn(this)" disabled>
+                                        <span class="f_btn ty_mid">예</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--[D] 이미지 첨부 후-->
+                        <div class="sec detail_sec ty_line ">
+                            <span class="sticker _black">선택 항목</span>
+                            <div class="detail_sec_cont">
+                                <div class="attach_set">
+                                    <!--[D] 이미지 첨부 후-->
+                                    <div class="attach_img">
+                                        <img src="https://picsum.photos/500/500" alt="">
+                                    </div>
+                                    <!--//[D] 이미지 첨부 후-->
+                                    <input type="file" accept="image/*" id="attach_file" class="attach_file">
+                                    <ul class="list_info">
+                                        <li class="list_info_item">첨부가능 용량은 파일당 5MB 미만이며, 최대 3개까지 가능합니다.</li>
+                                        <li class="list_info_item">첨부불가 파일 확장자 : exe, js, php, html, htm, sh</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--[D] 소모품 사용 체크-->
+                        <div class="sec detail_sec ">
+                            <div class="detail_sec_tit">소모품 사용 체크</div>
+                            <div class="detail_sec_cont">
+                                <div class="counter_set">
+                                    <span class="txt">기본 세면용품</span>
+                                    <div class="counter">
+                                    <button class="counter_btn _down" disabled>-</button>
+                                        <input type="number" class="counter_input" value="5" readonly>
+                                        <button class="counter_btn _up" disabled>+</button>
+                                    </div>
+                                </div>  
+                                <div class="counter_set">
+                                    <span class="txt">기본 세면용품</span>
+                                    <div class="counter">
+                                        <button class="counter_btn _down" disabled>-</button>
+                                        <input type="number" class="counter_input" value="4" readonly>
+                                        <button class="counter_btn _up" disabled>+</button>
+                                    </div>
+                                </div>  
+                                <div class="counter_set">
+                                    <span class="txt">기본 세면용품</span>
+                                    <div class="counter">
+                                        <button class="counter_btn _down" disabled>-</button>
+                                        <input type="number" class="counter_input" value="2" readonly>
+                                        <button class="counter_btn _up" disabled>+</button>
+                                    </div>
+                                </div>         
+                            </div>
+                        </div>
+
+
+                        <!--[D] 분실물 체크-->
+                        <div class="sec">
+                            <label class="f_chk ty_bg w100">
+                                <input type="checkbox" checked disabled>
+                                <div class="f_chk_ico"></div>
+                                <div class="f_chk_txt">분실물 체크 (필요시)</div>
+                            </label>
+                        </div>
                     </div>
+                        
+
                     <div class="modal_bot">
                         <button type="submit" class="f_btn ty_mid _line w_60" onclick="close_modal(this)">닫기</button>
                     </div>
