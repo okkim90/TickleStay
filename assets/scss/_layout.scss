@@ -2449,9 +2449,13 @@
     }
 }
 @media print {
+    @page { 
+        size: 9cm 4cm;
+         margin: 0; 
+    }
     html, body {
-        width: 9cm;
-        height: 4cm;
+        margin: 0;
+        padding: 0;
     }
     #wrap { 
         display: none;
@@ -2460,7 +2464,8 @@
     #qr_print {
         //position: fixed;
         //left: 0; top: 0;
-        display: block !important;  
+        display: block !important;
+        //margin: 0 auto;  
         width: 9cm; height: 4cm;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;

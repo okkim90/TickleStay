@@ -8621,9 +8621,13 @@ input::-webkit-search-results-decoration {
 }
 
 @media print {
+  @page {
+    size: 9cm 4cm;
+    margin: 0;
+  }
   html, body {
-    width: 9cm;
-    height: 4cm;
+    margin: 0;
+    padding: 0;
   }
   #wrap {
     display: none;
