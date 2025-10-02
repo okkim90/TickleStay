@@ -425,7 +425,7 @@
                             </div>
                             <div class="work_qr">
                                 <div class="btn_set d_flex fw_w _gap8">
-                                    <button type="button" class="f_btn ty_mid _line _ico _print">인쇄하기</button>  
+                                    <button type="button" onclick="window.print()" class="f_btn ty_mid _line _ico _print">인쇄하기</button>  
                                     <button type="button" class="f_btn ty_mid _line _ico _mView">모바일화면 미리보기</button>
                                 </div>
                                 <div class="qr_wrap">
@@ -563,6 +563,30 @@
     </div>
     <!--[D] 로딩 레이어 -->
 
-    
+    <!--[D] QR print 레이어-->
+    <div id="qr_print">
+        <div class="qr_print_inner">
+            <div class="qr_img_box">
+                <div class="qr_img">
+                    <span class="edge edge1"></span>
+                    <span class="edge edge2"></span>
+                    <span class="edge edge3"></span>
+                    <span class="edge edge4"></span>
+                    <img src="../assets/images/qr_sample.png" alt="">
+                </div>
+            </div>
+            
+            <div class="qr_cont">
+                <div class="logo"><img src="../assets/images/logo_qr.svg" alt=""></div>
+                <div class="room_info">
+                    <div class="room_num">
+                        <span class="fc_orange">F1</span>
+                        <span class="fc_key">101</span>
+                    </div>
+                    <div class="room_type">Standard</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

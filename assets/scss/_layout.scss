@@ -2351,3 +2351,123 @@
         }
     }
 }
+
+
+
+
+// 라벨 프린트용 qr 레이어
+#qr_print {
+    display: none;
+}
+.qr_print_inner {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 0.1cm solid $c_key;
+    padding: 0.4cm;
+    width: 9cm;
+    height: 4cm;
+    max-height: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+
+    .qr_img {
+        &_box {
+            display: flex;
+            align-items: center;
+        }
+        position: relative;
+        width: 3cm;
+        height: 3cm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.25cm;
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        .edge {
+            position: absolute;
+            width: 0.4cm;
+            height: 0.4cm;
+            &1 {
+                left: 0;
+                top: 0;
+                border-top: 0.1cm solid $c_orange;
+                border-left: 0.1cm solid $c_orange;
+            }
+            &2 {
+                right: 0;
+                top: 0;
+                border-top: 0.1cm solid $c_orange;
+                border-right: 0.1cm solid $c_orange;
+            }
+            &3 {
+                left: 0;
+                bottom: 0;
+                border-bottom: 0.1cm solid $c_orange;
+                border-left: 0.1cm solid $c_orange;
+            }
+            &4 {
+                right: 0;
+                bottom: 0;
+                border-bottom: 0.1cm solid $c_orange;
+                border-right: 0.1cm solid $c_orange;
+            }
+        }
+    }
+
+    .qr_cont {
+        display: flex;
+        flex-direction: column;
+        .logo {
+            display: flex;
+            justify-content: flex-end;
+            img {
+                width: 3cm;
+            }
+        }
+        .room_info {
+            margin-top: auto;
+            line-height: 1.1;
+            .room_num {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                column-gap: 0.2cm;
+                font-size: 28pt;
+                font-weight: bold;     
+            }
+            .room_type {
+                font-size: 16pt;
+                font-weight: 500;
+                text-align: right;    
+            }
+        }
+    }
+}
+@media print {
+    html, body {
+        width: 9cm;
+        height: 4cm;
+    }
+    #wrap { 
+        display: none;
+    }
+    
+    #qr_print {
+        //position: fixed;
+        //left: 0; top: 0;
+        display: block !important;  
+        width: 9cm; height: 4cm;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    /* 브라우저가 여백 넣지 않게 */
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
