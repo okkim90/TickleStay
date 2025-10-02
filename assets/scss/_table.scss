@@ -48,12 +48,10 @@
             border-color: $c_key;
             color: $c_key;
         }
-        &[rowspan] {
-            background-color: #fff !important;
-            
-        }
+       
        
     }
+
     
 
     thead {
@@ -100,6 +98,11 @@
                     color: $c_key;
                 }
                 
+            }
+        }
+        td, th {
+            &[rowspan] {
+                background-color: #fff !important;
             }
         }
     }

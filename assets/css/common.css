@@ -11011,9 +11011,6 @@ input::-webkit-search-results-decoration {
   border-color: #635954;
   color: #635954;
 }
-.tbl th[rowspan], .tbl td[rowspan] {
-  background-color: #fff !important;
-}
 .tbl thead th {
   background-color: #f0e1da;
   font-weight: 500;
@@ -11044,6 +11041,9 @@ input::-webkit-search-results-decoration {
   background-color: #f0e1da;
   border-color: #635954;
   color: #635954;
+}
+.tbl tbody td[rowspan], .tbl tbody th[rowspan] {
+  background-color: #fff !important;
 }
 .tbl .btn_sorting {
   width: 24px;
